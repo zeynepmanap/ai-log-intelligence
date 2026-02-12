@@ -20,7 +20,7 @@ AI destekli analiz sayesinde hataların olası root cause’larını tahmin eder
 ### 1️⃣ Projeyi klonla
 Terminal veya CMD aç ve şu komutu çalıştır:
 ```bash
-git clone https://github.com/KULLANICI_ADIN/ai-log-explainer.git
+git clone <REPO_LINKI>
 cd ai-log-explainer
 
 2️⃣ Gereksinimleri yükle
@@ -34,5 +34,27 @@ python app.py
 Tarayıcıda aç: http://127.0.0.1:5000/
 Buradan logları, AI summary, root cause ve risk önerilerini görebilirsin.
 
+5️⃣ Örnek Çıktı
+ERROR
+CRITICAL
+WARNING
+INFO
 
--zeynep manap
+AI Summary: Payment processing failure due to connection timeouts
+AI Root Cause: Connection timeout errors while connecting to https://payment-api.com
+AI Risk Level: High
+AI Confidence Score: 65%
+Recommendations:
+- Verify payment gateway connectivity
+- Implement retry logic for failed requests
+
+6️⃣ Geliştirme Notları
+logs.py dosyasındaki örnek loglar değiştirilebilir.
+Dashboard tasarımı templates/dashboard.html üzerinden özelleştirilebilir.
+Kritik loglar için e-posta veya Slack bildirim entegrasyonu eklenebilir.
+AI modelini ileride gerçek log verileriyle besleyip doğruluk artırabilirsiniz.
+
+7️⃣ Lisans
+Bu proje MIT lisansı ile korunmaktadır. Daha fazla bilgi için LICENSE dosyasına bakabilirsiniz.
+
+
